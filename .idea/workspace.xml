@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83c9c8d7-897b-4618-b5a2-64c82850e1fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +40,10 @@
     &quot;url&quot;: &quot;https://github.com/hatsusansss/KursachBack.git&quot;,
     &quot;accountId&quot;: &quot;ab1d8547-2da7-4c3a-9a74-85d212c05466&quot;
   }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
 }</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -161,7 +163,8 @@
       <workItem from="1762275550572" duration="230000" />
       <workItem from="1764188178108" duration="1466000" />
       <workItem from="1764362912447" duration="1300000" />
-      <workItem from="1764364882611" duration="1444000" />
+      <workItem from="1764364882611" duration="3279000" />
+      <workItem from="1764444374605" duration="1275000" />
     </task>
     <servers />
   </component>

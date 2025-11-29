@@ -1,21 +1,29 @@
-FROM maven:3.8.5-openjdk-17 AS build
+FROM gradle:8.10-jdk21-alpine AS build
 
 WORKDIR /app
 
-COPY pom.xml .
+COPY build.gradle .
+COPY settings.gradle .
+COPY gradlew .
+COPY gradle gradle
+
+RUN chmod +x gradlew
+
+RUN ./gradlew dependencies --no-daemon
+
 COPY src ./src
 
-RUN mvn clean package -DskipTests
+RUN ./gradlew clean build -x test --no-daemon
 
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:21-jre-alpine
 
 WORKDIR /app
 
-COPY --from=build /app/target/*.jar app.jar
+COPY --from=build /app/build/libs/*.jar app.jar
 
 EXPOSE 8080
 
-RUN addgroup --system spring && adduser --system spring --ingroup spring
+RUN addgroup -S spring && adduser -S spring -G spring
 USER spring:spring
 
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "/app/app.jar"]
